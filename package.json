@@ -24,7 +24,8 @@
     "migration:generate": "pnpm typeorm migration:generate",
     "migration:run": "pnpm typeorm migration:run",
     "migration:revert": "pnpm typeorm migration:revert",
-    "seed:admin": "nest build && node dist/database/seeds/create-admin.js"
+    "seed:admin": "nest build && node dist/database/seeds/create-admin.js",
+    "seed:profile": "nest build && node dist/database/seeds/seed-profile.js"
   },
   "dependencies": {
     "@nestjs/common": "^12.0.1",
