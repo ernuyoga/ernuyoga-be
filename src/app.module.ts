@@ -6,6 +6,7 @@ import { AuthModule } from './modules/auth/auth.module.js';
 import { ThrottlerGuard, ThrottlerModule } from '@nestjs/throttler';
 import { APP_GUARD } from '@nestjs/core';
 import { EnvironmentVariables, validateEnv } from './config/env.validation.js';
+import { ProfilesModule } from './modules/profiles/profiles.module.js';
 
 export const { ObserveModule, ObserveInstrument } = createObserveModule();
 
@@ -27,6 +28,7 @@ export const { ObserveModule, ObserveInstrument } = createObserveModule();
     }),
     ThrottlerModule.forRoot([{ name: 'default', ttl: 60_000, limit: 100 }]),
     AuthModule,
+    ProfilesModule,
   ],
   controllers: [],
   providers: [
